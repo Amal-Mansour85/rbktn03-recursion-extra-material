@@ -2,7 +2,12 @@
 //------------------------- Basic Requirments -------------------------
 // 1.Summation to n: Let's implement the function sum that takes a single parameter n, and computes the sum of all integers up to n starting from 0, e.g
 
-//  function sum(n) {
+//  function sum(n){
+	while (n>0){
+
+	return n + sum(n-1);
+}
+}
 //  // TODO: your code here
 //  }
 //  sum(3); // => 3 + 2 + 1 + 0 => 6
@@ -13,6 +18,10 @@
 // 2.Factorial of n: The factorial of n is the product of all the integers preceding n, starting with 1, e.g.
 
 //  function factorial(n) {
+	while (n===1){
+		return n* factorial(n-1);
+	}
+}
 //  // TODO: your code here
 //  }
 //  factorial(3); // => 3 * 2 * 1 => 6
@@ -23,6 +32,11 @@
 // 3.Repeating a String n Times: Let's write a function called repeatString that takes two parameters: a string str, which is the string to be repeated, and count -- a number representing how many times the string str should be repeated, e.g.
 
 //  function repeatString(str, count) {
+	while (count>0){
+		count= count-1;
+	 return repeatString (str, count);
+	}
+}
 //  // TODO: your code here
 //  }
 //  repeatString('dog', 0); // => ''
@@ -46,8 +60,25 @@
 //  fib(1) is 1
 //  fib(n) is fib(n - 1) + fib(n - 2)
 //  Write a function called fib that accepts a number n as a parameter and computes the nth fibonacci number using the above rules.
+function fib (n){
+	if (n<=1){
+		return 1;
+	}
+	return fib(n-1)+ fib(n-2);
+}
 
-// 5.Write function that multiply the number by 10 n time
+
+
+
+// 5.Write function that multiply the number by 10 n 
+function myultiplyBy10 (number,n){  
+	if(n===0){
+		return number ;
+	}
+return 10 * multiplyBy10 (number,n-1);
+}
+
+
 
 //  multiplyBy10(number, n)
 //  multiplyBy10(4,3) => 4000
@@ -57,8 +88,13 @@
 // 1.Modify your sum function from the Basic Requirements section to accept two parameters, start and end: sum should now compute the sum of the numbers from start to end, e.g.
 
 //  function sum(start, end) {
-//  // TODO: your code here
-//  }
+	if (end===0) {
+		return 0;
+	}
+	return start + sum + (start,end-1);
+}
+	//  // TODO: your code here
+//  
 //  sum(2, 7); // => 2 + 3 + 4 + 5 + 6 + 7 => 27
 //  sum(3, 5); // => 3 + 4 + 5 => 12
 // What happens if start is larger than end? Modify sum to check for this case and, when found, swap the start and end arguments.
