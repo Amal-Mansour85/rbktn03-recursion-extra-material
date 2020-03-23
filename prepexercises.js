@@ -18,9 +18,11 @@
 // 2.Factorial of n: The factorial of n is the product of all the integers preceding n, starting with 1, e.g.
 
 //  function factorial(n) {
+	var total =1
 	while (n===1){
-		return n* factorial(n-1);
+		return n * factorial(n-1);
 	}
+	return total;
 }
 //  // TODO: your code here
 //  }
@@ -100,7 +102,12 @@ return 10 * multiplyBy10 (number,n-1);
 // What happens if start is larger than end? Modify sum to check for this case and, when found, swap the start and end arguments.
 
 // 2.Write a function product that works like sum, except it should compute the product of the numbers from start to end.
-
+function product (start, end) {
+	if (end===0) {
+		return 0;
+	}
+	return start + product + (start,end-1);
+}
 // Refactor your sum function from earlier to be implemented in terms of product.
 
 // 3.Let's pretend that JavaScript does not have the addition operator + -- instead, it comes with two functions called inc and dec that perform increment and decrement respectively:
@@ -112,14 +119,47 @@ return 10 * multiplyBy10 (number,n-1);
 //  function dec(x) {
 //  return x - 1;
 //  }
+function add(x,y){
+if (y===0){
+	return x ;
+}
+  return add + ((x+1), (x-1));
+  }
 // Your task is to write a function called add that takes two numbers as parameters, x and y, and adds them together.
 //  The catch is that you can only use inc and dec to accomplish this.
 
 // 4.Write a function called isEven that, given a number n as a parameter, returns true if that number is even, and false otherwise; however, you need to do this without using the % operator
-
+function isEven(n){
+	if(n > 0) {
+		return true;
+	} else if (n < 0){
+	return false ;
+}
+}
 // 5.Write a function called multiply that accepts two numbers as parameters, and multiplies them together -- but without using the * operator; instead, you'll need to use repeated addition.
+   function multiply (numb1,numb2){
+   	if (numb2===0){
 
+   		return 0;
+   	}
+   		return numb1 + multiply (numb1,numb2-1);
+   	}
+   	 
+   	
+   
 // 6.Write a JavaScript program to get the integers in range (x, y)
+var range = function (start_num, end_num){
+
+  if (end_num - start_num === 2){
+ 
+    return [start_num + 1];
+  } else {
+  
+    var list = range(start_num, end_num - 1);
+    list.push(end_num - 1);
+    return list;
+  }
+};
 
 //  range(1,9)   => '2, 3, 4, 5, 6, 7, 8'
 //  range(21,33) => '22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32'
@@ -127,6 +167,16 @@ return 10 * multiplyBy10 (number,n-1);
 // ------------------------- Advanced -------------------------
 
 // 1.By now you should have worked with the length property of strings, e.g. 'hello'.length. Your task is to write a function called stringLength that accepts a string as a parameter and computes the length of that string; however, as you may have guessed, you are not allowed to use the length property of the string! Instead, you'll need to make use of the string method called slice. To get an idea of how slice works, try the following at a console:
+var string = "hello";
+function  stringLength (string){
+var computes =0
+	 if(string>=0){
+string.slice(computes);
+     }
+return string;
+}
+string.slice(1)
+"ello";
 
 //  'hello'.slice(0);
 //  'hello'.slice(1);
@@ -145,28 +195,70 @@ return 10 * multiplyBy10 (number,n-1);
 //  8 % 10; // => 8
 //  7 % 5; // => 2
 // Write a function called modulo that works like the % operator, but without using it.
-
+ function modulo (n){
+ 	var y= n;
+ 	var x= n % 2;
+ 	if (n > 0){
+ 		return n , division + (n-1);
+ 	}
+ }
 // 3.Write a function called countChars that accepts two parameters: a string and a character. This function should return a number representing the number of times that the character appears in string. To access the first element of a string, you can use the following syntax:
+function countChars (string,character){
+	var string = 0;
+	for(var i=0 ;i<string.length ; i++){
+       string.slice (character);
+	}
 
+	return number;
+}
 //  // access the element at index 0
 //  'hello'[0]; // => 'h'
 //  'dog'[0]; // => 'd'
 // HINT: You'll also need to make use of the slice method as shown above in the exercise on computing the length of a string.
 
 // 4. Implement a function called indexOf that accepts two parameters: a string and a character, and returns the first index of character in the string. You'll need to make use of the techniques for accessing the first element of a string and the rest of the string (slice) as before.
+function indexOf (string,character){
 
+var string = 0;
+	for(var i=0 ;i < string.length ; i++){
+		
+		string.slice (character);
+	}
+	  return  index;
+}
 // 5.The power function in the lecture works, but can be made considerably faster through a method known as successive squaring. To get an idea of how this works, observe that:
+function power (x,y){
+	if (y > 0){
+	return 1;
+}
+	return Math.power (x,y);
+}
 
 // Modify the power function to take advantage of this technique.
 
 // 6.Write function called reverse that take a string and return the revers string
-
+function reverse(str){
+  if (str ===""){
+	return "";
+} else {
+   return reverse (str.substr(1)) + str.charAt(0);
+}
+}
 //  reverse( 'Fatima' ) => 'amitaF'
 //  reverse( 'this could be an easy question ' ) =>
 //  'noitseuq ysae na eb dluoc siht'.
 
-// 7.Find the greatest common divisor of two numbers.
+// 7.Find the greatest common divisor of two numbers
+50%5===0;
+15%5===0;
 
 // 8.Find the lowest common multiple of two numbers. Assume that the two numbers are greater than or equal to 2.
-
+18%4===2;
+22%5===2;
 // 9.There are N number of persons in a party, find the total number of handshake such that a person can handshake only once.
+function welcomeParty (n){
+while (n > 0) {
+   return n +(n-1);
+}
+return n ;
+}
