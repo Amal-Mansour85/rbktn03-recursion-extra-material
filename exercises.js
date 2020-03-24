@@ -5,9 +5,8 @@
 
 const russianDoll = [[[[[[[[['🇷🇺']]]]]]]]]
 
-function nestedRussianDoll(){
-
-}
+function nestedRussianDoll(arr){
+	
 
 /*
   The internet is a dangerous place. Write a function that takes an
@@ -16,6 +15,25 @@ function nestedRussianDoll(){
   Input: ['damn'], [{ id: 0, content: 'This is a damn good cake.', replies: [] }]
   Output: [{ id: 0, content: 'This is a **** good cake.', replies: [] }]
 */
+
+var array = [{ id: 0, content: 'This is a damn good cake.', replies: [] }];
+
+function cencorWord (word){
+for(var i=0 ; i < array.length ; i++){ 
+     if(array[i]=== n){ 
+       word.splice(...damn); 
+       i--; 
+     } 
+   } 
+   return word; 
+ }
+
+	
+}
+
+
+
+
 
 const comments = [
   {
@@ -47,7 +65,17 @@ const comments = [
   }
 ]
 
+
 function removeBadWords(){
+	for(var i=0 ; i < array.length ; i++){ 
+     if(array[i]=== n){ 
+       word.splice(...word); 
+       i--; 
+     } 
+   } 
+   return word; 
+ }
+
 	
 }
 
@@ -58,17 +86,35 @@ function removeBadWords(){
 // If a number is divisible by 5, print 'buzz'.
 // If a number is divisible by 3 and 5, print 'fizzbuzz'.
 // Otherwise print the number itself.
-function fizzBuzz() {
-
+function fizzBuzz(number) {
+    for(var i=0; i< number ; i++){
+        if (i%3===0 ) {
+            return "fizz";
+        } else if(i%5===0){
+            return "buzz";
+        } else if(i%3===0 && i%5===0){
+          return "fizzbuzz";
+        }else {
+          return i;
+        }
+    }
+    
 }
+
 
 // Create a recursive funciton that will take any string and return a boolean based on whether or
 // not it is a palindrome.
 // palindrome("abba") ==> true
 // plindrome("abbaa") ==> false
-function palindrome() {
-
+function palindrome(str) {
+  
+var str = ""
+  return true;
+  
+  return false;
 }
+
+
 
 
 // Write a function, lucasNumber(n), that takes in a number.
@@ -89,9 +135,12 @@ function palindrome() {
 // lucasNumber(3)   // => 4
 // lucasNumber(5)   // => 11
 // lucasNumber(9)   // => 76
-function lucasNumber(n) {
+function lucasNumber (n){
+   if (n>=2){
+    return n;
 }
-
+return  (n+1) +1 ;
+}
 
 // Write a function, sumArray(array), that takes in an array of numbers.
 // The function should return the total sum of the elements.
@@ -104,9 +153,15 @@ function lucasNumber(n) {
 // sumArray([5])            // => 5
 // sumArray([5, 2])         // => 7
 // sumArray([4, 10, -1, 2]) // => 15
-function sumArray(array) {
-}
 
+function sumArray(array) {
+
+var sum = 0 ;
+for(var i = 0; i< array.length ;i++){
+  sum += array[i];
+}
+  return sum ;
+}
 
 // Write a function makeChange(n, array), that take in a number and an array.
 // The function should return in an array with the number of times we can change that amount
@@ -115,13 +170,32 @@ function sumArray(array) {
 //
 // makeChange(100, [0,0,0,0]) ==> [4, 0, 0, 0]
 // makeChange(168, [0, 0, 0, 0]) ==> [6, 1, 1, 3]
-function makeChange(n, array){
+
+var array =[0,0,0,0];
+
+function makeChange (n ,array){
+
+  array.pop(n);
 }
+return n ;
+}
+
+
+
 
 
 // Write a function that takes in an array of numbers and returns the maximum value of that array
 // Solve this recursively 
 
+var arr = [1,2,5,6,9];
 
-function findMax(arr){
-}
+  function findMax(arr){
+  function findMax(arr){
+  var i = 0 
+   for (var i=0; i<array.length ; i++){ 
+     if (findMax<array[i]){ 
+       findMax=array[i]; 
+     } 
+  } 
+   return arr; 
+ }
